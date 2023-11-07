@@ -31,7 +31,7 @@ function App() {
   return (
   <main className='container'>
     <div className='row blue-background'>
-      <h1>IP Adress Tracker</h1>
+      <h1 className='header'>IP Adress Tracker</h1>
       <IPInput ip={ip} setIp={setIp} />
       <DisplayValues ip={ip} city={city} country={country} postalcode={postalcode} timezone={timezone} isp={isp} />
     </div>

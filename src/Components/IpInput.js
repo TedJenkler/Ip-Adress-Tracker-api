@@ -1,7 +1,6 @@
 const IPInput = (props) => {
     return (<>
-    <input placeholder={props.ip}></input>
-    <button></button>
+    <input className="input" placeholder={props.ip}></input>
     </>)
 }
 

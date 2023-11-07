@@ -19,8 +19,8 @@ const Map = (props) => {
 
     return (
         <>
-         <MapContainer center={props.coordinates} zoom={13}>
-            <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' url='https://tile.openstreetmap.org/{z}/{x}/{y}.png' />
+         <MapContainer zoomControl={null} center={props.coordinates} zoom={13}>
+            <TileLayer url='https://tile.openstreetmap.org/{z}/{x}/{y}.png' />
             <Marker position={props.coordinates} icon={greenIcon}></Marker>
          </MapContainer>
         </>
