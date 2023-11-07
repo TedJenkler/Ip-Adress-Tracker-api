@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import DisplayValues from './Components/DisplayValues';
+import IPInput from './Components/IpInput';
+import Map from './Components/Map';
 
 function App() {
+
+  const [ip, setIp] = useState("203.150.179.106");
+  const [city, setCity] = useState("Bangkok")
+  const [country, setCountry] = useState("Thailand")
+  const [postalcode, setPostalcode] = useState("10100")
+  const [timezone, setTimezone] = useState("-06:00")
+  const [isp, setISP] = useState("SpaceX Starlink")
+
+  // useEffect(() => {
+   // fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_WFzeE0kMyAo0pYv3HItVeZvoXdk97&ipAddress=${ip}`)
+   //   .then((response) => response.json())
+   // .then((data) => console.log(data))
+ // },[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <main className='container'>
+    <div className='row blue-background'>
+      <h1>IP Adress Tracker</h1>
+      <IPInput ip={ip} setIp={setIp} />
+      <DisplayValues ip={ip} city={city} country={country} postalcode={postalcode} timezone={timezone} isp={isp} />
     </div>
+    <div className='row map-background'>
+      <Map />
+    </div>
+  </main>
   );
 }
 
