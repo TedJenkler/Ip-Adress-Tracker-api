@@ -6,17 +6,27 @@ import Map from './Components/Map';
 
 function App() {
 
-  const [ip, setIp] = useState("203.150.179.106");
-  const [city, setCity] = useState("Bangkok")
-  const [country, setCountry] = useState("Thailand")
-  const [postalcode, setPostalcode] = useState("10100")
-  const [timezone, setTimezone] = useState("-06:00")
-  const [isp, setISP] = useState("SpaceX Starlink")
+  const [ip, setIp] = useState("Loading...");
+  const [city, setCity] = useState("Loading...")
+  const [country, setCountry] = useState("Loading...")
+  const [postalcode, setPostalcode] = useState("Loading...")
+  const [timezone, setTimezone] = useState("Loading...")
+  const [isp, setISP] = useState("Loading...")
+  const [coordinates, setCoordinates] = useState([18.79038, 98.98468])
 
-  // useEffect(() => {
-   // fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_WFzeE0kMyAo0pYv3HItVeZvoXdk97&ipAddress=${ip}`)
-   //   .then((response) => response.json())
-   // .then((data) => console.log(data))
+   //useEffect(() => {
+    //fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_WFzeE0kMyAo0pYv3HItVeZvoXdk97&ipAddress=${ip}`)
+      //.then((response) => response.json())
+      //.then((data) => {
+        //console.log(data)
+       // setIp(data.ip)
+        //setCity(data.location.city)
+        //setCountry(data.location.country)
+        //setPostalcode(data.location.postalCode)
+       // setTimezone(data.location.timezone)
+       // setISP(data.isp)
+       // setCoordinates([data.location.lat, data.location.lng])
+     // })
  // },[])
   return (
   <main className='container'>
@@ -26,7 +36,7 @@ function App() {
       <DisplayValues ip={ip} city={city} country={country} postalcode={postalcode} timezone={timezone} isp={isp} />
     </div>
     <div className='row map-background'>
-      <Map />
+      <Map coordinates={coordinates} />
     </div>
   </main>
   );
