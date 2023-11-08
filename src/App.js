@@ -14,7 +14,7 @@ function App() {
   const [isp, setISP] = useState("Loading...")
   const [coordinates, setCoordinates] = useState([18.79038, 98.98468])
 
-  useEffect(() => {
+ /* useEffect(() => {
     fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_WFzeE0kMyAo0pYv3HItVeZvoXdk97&ipAddress=${ip}`)
       .then((response) => response.json())
       .then((data) => {
@@ -26,7 +26,7 @@ function App() {
         setISP(data.isp)
         setCoordinates([data.location.lat, data.location.lng])
       })
-  },[])
+  },[]) */
   return (
   <main className='container'>
     <div className='row blue-background'>

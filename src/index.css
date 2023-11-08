@@ -1,10 +1,10 @@
-body {
+html, body, #root {
   height: 100%;
-  max-width: 100vw;
+  width: 100vw;
 }
 
 .container {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -69,6 +69,12 @@ body {
   border-radius: 1em;
 }
 
+.responsivevalue{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .value-h1 {
   font-size: 0.75em;
   margin-top: 0.5em;
@@ -85,4 +91,106 @@ body {
 
 .leaflet-container {
   height: 100%;
+}
+
+@media screen and (min-width: 425px) {
+
+  .submit {
+    right: 2.5em;
+  }
+  .input {
+    margin-left: 2.5em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  .container {
+    min-width: 768px;
+  }
+
+  .submit {
+    right: 3.5em;
+  }
+
+  .input {
+    margin-left: 13.4em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    min-width: 1024px;
+  }
+
+  .blue-background {
+    background-image: url(./images/pattern-bg-desktop.png);
+  }
+
+  .header {
+    font-size: 2em;
+  }
+
+  .inputgroup {
+    bottom: 5em;
+    left: 7.5em;
+  }
+
+  .displayvalues{
+    width: 50em;
+    height: 6em;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin-top: 4em;
+    padding: 0;
+  }
+
+  .responsivevalue{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+    align-items: flex-start;
+    margin: 0em;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    min-width: 1440px;
+  }
+
+  .inputgroup {
+    bottom: 7.5em;
+    left: 22.5em;
+  }
+
+  .input {
+    display: inline;
+    width: 40em;
+    height: 40%;
+    border-radius: 1em;
+    border: none;
+    margin-left: 1em;
+  }
+
+  .displayvalues{
+    width: 50em;
+    height: 6em;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin-top: 4em;
+    padding: 0;
+  }
+
+  .responsivevalue{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+    align-items: flex-start;
+    margin: 0em;
+  }
 }
