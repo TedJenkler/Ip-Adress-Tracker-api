@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Ip-Adress-Tracker-api/static/css/main.68b0d38c.css",
+    "main.js": "/Ip-Adress-Tracker-api/static/js/main.4a44ab31.js",
+    "static/js/787.625c2c5b.chunk.js": "/Ip-Adress-Tracker-api/static/js/787.625c2c5b.chunk.js",
+    "static/media/pattern-bg-desktop.png": "/Ip-Adress-Tracker-api/static/media/pattern-bg-desktop.5013c4f570ecf757f855.png",
+    "static/media/pattern-bg-mobile.png": "/Ip-Adress-Tracker-api/static/media/pattern-bg-mobile.3666aa38dccbc0ebd679.png",
+    "index.html": "/Ip-Adress-Tracker-api/index.html",
+    "static/media/icon-arrow.svg": "/Ip-Adress-Tracker-api/static/media/icon-arrow.2eaaa5ee3602d5aa14a2dba69e9fb7a0.svg",
+    "main.68b0d38c.css.map": "/Ip-Adress-Tracker-api/static/css/main.68b0d38c.css.map",
+    "main.4a44ab31.js.map": "/Ip-Adress-Tracker-api/static/js/main.4a44ab31.js.map",
+    "787.625c2c5b.chunk.js.map": "/Ip-Adress-Tracker-api/static/js/787.625c2c5b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.68b0d38c.css",
+    "static/js/main.4a44ab31.js"
+  ]
+}
