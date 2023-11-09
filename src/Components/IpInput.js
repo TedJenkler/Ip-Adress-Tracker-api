@@ -3,12 +3,18 @@ import arrow from "../images/icon-arrow.svg"
 
 const IPInput = (props) => {
     const [update, setUpdate] = useState("")
+
+    const updater = () => {
+        props.setIp(update)
+    }
+
     const handlechange = (e) => {
         setUpdate(e.target.value)
     }
-       const handleclick = async () => {
+
+    const handleclick = async () => {
+        updater()
         try {
-            props.setIp(update)
             const data = await (await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_WFzeE0kMyAo0pYv3HItVeZvoXdk97&ipAddress=${props.ip}`)).json()
             console.log(data)
             props.setCity(data.location.city)
@@ -18,9 +24,10 @@ const IPInput = (props) => {
             props.setISP(data.isp)
             props.setCoordinates([data.location.lat, data.location.lng])
         } catch (err) {
-            return null
+            alert("something wrong happend")
         }
     }
+
     return (<>
     <div className="inputgroup">
         <input className="input" onChange={handlechange} value={update} placeholder="Search for any IP adress or domain"></input>

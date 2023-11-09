@@ -1,6 +1,8 @@
+@import url('https://fonts.google.com/specimen/Rubik');
 html {
   height: 100vh;
   width: 100vw;
+  font-family: 'Rubik', sans-serif;
 }
 
 body, #root {
@@ -31,6 +33,7 @@ body, #root {
   margin-top: 1em;
   font-size: 1.5em;
   height: 1em;
+  font-weight: 700;
 }
 
 .inputgroup {
@@ -84,15 +87,19 @@ body, #root {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 60%;
 }
 
 .value-h1 {
   font-size: 0.75em;
   margin-top: 0.5em;
+  color: rgb(166 166 166);
+  font-weight: 500;
 }
 
 .value-p {
   font-size: 1.25em;
+  font-weight: 400;
 }
 
 .map-background {
@@ -119,21 +126,25 @@ body, #root {
 
   .displayvalues{
     width: 50em;
-    height: 6em;
+    height: 12em;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-evenly;
-    margin-top: 4em;
+    margin-top: 3em;
     padding: 0;
   }
 
   .responsivevalue{
     display: flex;
     flex-direction: column;
-    padding-top: 1em;
+    margin: 2.5em;
+    padding: 0 2.5em 0 2.5em;
     align-items: flex-start;
     margin: 0em;
+  }
+  #r1, #r2, #r3 {
+    border-right: 1px solid lightgray;
   }
 }
 
@@ -147,21 +158,20 @@ body, #root {
   }
 
   .displayvalues{
-    width: 50em;
-    height: 6em;
+    width: 60em;
+    height: 12em;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
     justify-content: space-evenly;
-    margin-top: 7em;
+    margin-top: 2em;
     padding: 0em;
   }
 
   .responsivevalue{
     display: flex;
     flex-direction: column;
-    padding-top: 1em;
     align-items: flex-start;
     margin: 0em;
+    padding: 2.5em;
   }
 }

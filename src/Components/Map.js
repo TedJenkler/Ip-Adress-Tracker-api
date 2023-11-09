@@ -17,9 +17,17 @@ const Map = (props) => {
         popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
     });
 
+    function SetViewOnClick({ coords }) {
+        const map = useMap();
+        map.setView(coords, map.getZoom());
+
+        return null;
+      }
+
     return (
         <>
          <MapContainer zoomControl={null} center={props.coordinates} zoom={13}>
+         <SetViewOnClick coords={props.coordinates} />
             <TileLayer url='https://tile.openstreetmap.org/{z}/{x}/{y}.png' />
             <Marker position={props.coordinates} icon={greenIcon}></Marker>
          </MapContainer>
